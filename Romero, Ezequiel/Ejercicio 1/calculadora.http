@@ -1,0 +1,31 @@
+@url = http://localhost:3000
+
+### Calcular rectángulo
+POST {{url}}/calcular
+Content-Type: application/json
+
+{
+  "ancho": 4,
+  "alto": 10
+}
+
+### Calcular cuadrado
+POST {{url}}/calcular
+Content-Type: application/json
+
+{
+  "ancho": 7,
+  "alto": 7
+}
+
+### Calcular con valores negativos
+POST {{url}}/calcular
+Content-Type: application/json
+
+{
+  "ancho": -5,
+  "alto": 10
+}
+
+### Mostrar Historial de cálculos
+GET {{url}}/calculos
