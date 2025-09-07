@@ -1,0 +1,51 @@
+@url = http://localhost:3000
+
+### Crear alumno válido
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Juan Pérez",
+  "notas": [7, 8, 9]
+}
+
+### Crear Otro alumno válido
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Marcela Brizuela",
+  "notas": [7, 8, 9]
+}
+
+### Crear alumno repetido
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Juan Pérez",
+  "notas": [7, 8, 9]
+}
+
+### Crear alumno con notas inválidas
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Ana Mercado",
+  "notas": [5, "seis", 7]
+}
+
+### Modificar notas de un alumno
+PUT {{url}}/alumnos/Juan Pérez
+Content-Type: application/json
+
+{
+  "notas": [7, 5, 6]
+}
+
+### Consultar alumno por nombre
+GET {{url}}/alumnos/Juan Pérez
+
+### Listar todos los alumnos
+GET {{url}}/alumnos
