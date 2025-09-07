@@ -1,0 +1,28 @@
+@url = http://localhost:3000
+
+### Crear tarea incompleta
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Limpiar la casa",
+  "completada": false
+}
+
+### Crear tarea completada
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Hacer compras",
+  "completada": true
+}
+
+### Listar todas las tareas
+GET {{url}}/tareas
+
+### Filtrar por tareas completadas
+GET {{url}}/tareas?completadas=true
+
+### Filtrar por tareas sin completar
+GET {{url}}/tareas?completadas=false
